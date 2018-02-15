@@ -46,9 +46,19 @@ function makeGreen() {
   p.style.fontSize = '50px';
 }
 //Inpects This using console log(dom) right click/ Break On/ attribute modifications = shows which javascript is debug
+
 // Regular
+console.log('Regular Console Log');
+
 // Interpolated
+console.log('This example of %s string', 'Interpolated')// This example of Interpolated string
+// Or Backticks Method
+let expression = 'Interpolated'
+console.log(`This example of ${expression} string`)
+
 // Styled
+console.log('%c Styling Console Log', 'color:blue; font-size:20px; background:gray; text-shadow: 3px 3px 0 red');
+
 // warning!
 // Error :|
 // Info
