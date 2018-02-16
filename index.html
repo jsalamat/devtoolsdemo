@@ -101,8 +101,29 @@ dogs.forEach(dog => {
   console.log(`${dog.name} is ${dog.age * 7} dog years old`);
   console.groupEnd(`${dog.name}`);
 })
+
+console.table(dogs);
+
 // counting
+console.count('The');
+console.count('Elite');
+console.count('The');
+console.count('The');
+console.count('The');
+console.count('Elite');
+console.count('The');
+console.count('Elite');
+
 // timing
+//show how long it takes
+console.time('fetching data');
+fetch('https://api.github.com/users/jsalamat')
+  .then(data => data.json())
+  .then(data => {
+    console.timeEnd('fetching data');
+    console.log(data);
+  })
+
 
 </script>
 
