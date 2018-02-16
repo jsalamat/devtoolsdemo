@@ -68,15 +68,39 @@ console.error('Error Test and tell console which line is error from');
 // Info
 console.info('FYI For Your Info');
 
-// Testing
-cons p = document.querySelector('p');
-console.asserts(p.classList.contains('ouch'), 'That is wrong!');
+// Assert - to test if things are true and only conle log the Assertion if it is false
+console.assert(1 === 1, 'This won\'t show because its true');
+// console.assert(1 === 2, 'This will show because its false!');
+
+const p = document.querySelector('p');
+// console.asserts(p.classList.contains('ouch'), 'That is wrong!');
 
 // clearing
 //console.clear();
 
 // Viewing DOM Elements
+  // console log gives you the element
+  console.log(p);
+
+  // console dir gives you the properties and methods
+  console.dir(p);
+
 // Grouping together
+dogs.forEach(dog => {
+  console.group(`${dog.name}`);
+  console.log(`This is ${dog.name}`);
+  console.log(`${dog.name} is ${dog.age} years old`);
+  console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+  console.groupEnd(`${dog.name}`);
+})
+
+dogs.forEach(dog => {
+  console.groupCollapsed(`${dog.name}`);
+  console.log(`This is ${dog.name}`);
+  console.log(`${dog.name} is ${dog.age} years old`);
+  console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+  console.groupEnd(`${dog.name}`);
+})
 // counting
 // timing
 
